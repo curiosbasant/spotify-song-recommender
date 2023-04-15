@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Song Recommender</title>
+    <script src="./script.js" type="text/javascript" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-8" onload="main()">
+    <form class="flex flex-col space-y-4" onsubmit="submitForm(event)">
+      <input
+        class="border px-4 py-2 rounded-md w-full"
+        placeholder="Song Name"
+        name="songTitle"
+        type="text" />
+      <input
+        class="border px-4 py-2 rounded-md w-full"
+        placeholder="Artist Name"
+        name="artistName"
+        type="text" />
+      <button class="bg-green-500 p-4 rounded-md text-white">Get Recommended Songs</button>
+    </form>
+
+    <span class="inline-block text-2xl font-bold mb-2 mt-12">Spotify Recommended Songs</span>
+    <ul id="recommended-songs-list" class="flex flex-col space-y-2"></ul>
+  </body>
+</html>
